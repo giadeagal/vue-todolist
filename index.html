@@ -27,7 +27,7 @@
         </div>
         <div class="exams-container">
             <ul v-if="exams.length != 0">
-                <li class="clearfix" v-for="(exam, i) in exams" @click="delExam(i)">
+                <li v-for="(exam, i) in exams" @click="delExam(i)">
                     {{exam}}
                     <i class="far fa-window-close"></i>
                 </li>
