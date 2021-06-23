@@ -17,6 +17,8 @@ const app = new Vue(
             addExam() {
                 if (this.newExam.length > 0 && !this.exams.includes(this.newExam)) {
                     this.exams.push(this.newExam)
+                } else if (this.exams.includes(this.newExam)) {
+                    alert("Questo esame è già incluso in carriera!");
                 };
                 this.newExam = "";
             },

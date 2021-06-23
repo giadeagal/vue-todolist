@@ -22,7 +22,7 @@
             <img :src="logo" alt="Sapienza">
         </header>
         <div class="new-exam">
-            <input type="text" placeholder="Nuovo esame" v-model="newExam">
+            <input type="text" placeholder="Nuovo esame" v-model="newExam" @keyup.enter="addExam">
             <button @click="addExam">aggiungi</button>
         </div>
         <div class="exams-container">
@@ -32,7 +32,7 @@
                     <i class="far fa-window-close"></i>
                 </li>
             </ul>
-            <h2 v-else>Nessun esame disponibile</h2>
+            <h2 v-else>Nessun esame trovato in questa carriera</h2>
         </div>
     </div>
     <!-- /Vue app -->
