@@ -19,6 +19,9 @@ const app = new Vue(
                     this.exams.push(this.newExam)
                 };
                 this.newExam = "";
+            },
+            delExam(x) {
+                this.exams.splice(x, 1);
             }
         }
     }

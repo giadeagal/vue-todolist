@@ -26,11 +26,13 @@
             <button @click="addExam">aggiungi</button>
         </div>
         <div class="exams-container">
-            <ul>
-                <li class="clearfix" v-for="exam in exams">{{exam}}
+            <ul v-if="exams.length != 0">
+                <li class="clearfix" v-for="(exam, i) in exams" @click="delExam(i)">
+                    {{exam}}
                     <i class="far fa-window-close"></i>
                 </li>
             </ul>
+            <h2 v-else>Nessun esame disponibile</h2>
         </div>
     </div>
     <!-- /Vue app -->
